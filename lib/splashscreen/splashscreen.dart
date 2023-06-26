@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../auth/login.dart';
+import '../navigator/navigation.dart';
 import '../pages/home.dart';
 import '../pages/nearby.dart';
 
@@ -24,7 +25,7 @@ class _SplasState extends State<Splashscreen> {
 
        if(_user_id != null){
            //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
-           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NearByLocationPage()));
+           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NavigationBarPage()));
        }
        else{
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginPage()));

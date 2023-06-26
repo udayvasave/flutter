@@ -18,7 +18,7 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
-
+  bool isonline = true;
 
   var from_user_id = '';
   _getUserDetails() async {
@@ -43,8 +43,8 @@ class _ChatPageState extends State<ChatPage> {
     bool Sendmessage_btn = true;
   List? MessageData;
 fetchMessages() async {
-  
-
+  _updateOnline();
+  showStatus();
 
 
   var messageUrl = Uri.parse(connection+"ChattingApp/fetch_chatting.php?from_user_id=$from_user_id&to_user_id="+widget.senderId);
@@ -64,7 +64,7 @@ sendMessage() async {
     "to_user_id": widget.senderId,
     "messagetext":_messagetext.text
   }).then((value){
-   print(value);
+   print(value.body);
    _messagetext.text = "";
    setState(() {
      Sendmessage_btn = true;
@@ -74,6 +74,40 @@ sendMessage() async {
 
 
 }
+
+
+
+var updateonlineurl = Uri.parse(connection+"/ChattingApp/update_online_or_offline.php");
+_updateOnline() async {
+    var response = await http.post(updateonlineurl,body:{
+      "login_user_id": from_user_id
+    }).then((value) {
+      
+    });
+}
+
+var showStatusUrl = Uri.parse(connection+'/ChattingApp/show_user_status.php');
+ showStatus()async{
+  var response = await http.post(showStatusUrl,body:{
+      "sender_id": widget.senderId
+    }).then((value) {
+      print(value.body);
+      if(value.body == '3'){
+        setState(() {
+            isonline = false;
+        });
+      }
+      else{
+        setState(() {
+          isonline = true;
+        });
+      }
+    });
+}
+
+
+
+
 
 
 
@@ -141,11 +175,19 @@ void initState() {
         backgroundColor: Colors.indigo[900],
         title: Row(
           children: [
+            
             CircleAvatar(
               backgroundImage: NetworkImage(widget.chatuserProfile),
             ),
             SizedBox(width: 10,),
-            Text(widget.chatusername),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(widget.chatusername),
+                isonline ? Text("Online", style:TextStyle(fontSize: 14, color: Colors.green), textAlign: TextAlign.start) : 
+                Text("Offline", style:TextStyle(fontSize: 14, color: Colors.red), textAlign: TextAlign.start,)
+              ],
+            ),
           ],
         ),
         

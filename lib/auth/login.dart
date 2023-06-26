@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:chatapp/auth/signup.dart';
+import 'package:chatapp/navigator/navigation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -56,14 +58,26 @@ final SharedPreferences prefs = await SharedPreferences.getInstance();
         fontSize: 16.0
     );
     }
+     else if(value.body == '3'){
+       Fluttertoast.showToast(
+        msg: "Your Account is deactivated",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
+    }
+
     else{
-    
+      print(value.body);
       
        var parsedata = json.decode(value.body);
-        await prefs.setString('user_id', parsedata['user_id']);
+        await prefs.setString('user_id', parsedata['user_id'].toString());
         await prefs.setString('user_name', parsedata['user_name']);
-        await prefs.setString('user_name', parsedata['user_image']);
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
+        await prefs.setString('user_image', parsedata['user_image']);
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NavigationBarPage()));
 
     }
 
@@ -78,62 +92,71 @@ final SharedPreferences prefs = await SharedPreferences.getInstance();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Column(
-         children: [
-          SizedBox(height: 80,),
-          Text("Login", style: TextStyle(fontSize: 40),),
-
-
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
-            child: TextField(
-              controller: _username,
-              decoration: InputDecoration(
-                hintText: 'Username',
-                prefixIcon: Icon(Icons.person)
+       body: SingleChildScrollView(
+         child: Column(
+           children: [
+            SizedBox(height: 80,),
+            Text("Login", style: TextStyle(fontSize: 40),),
+       
+       
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
+              child: TextField(
+                controller: _username,
+                decoration: InputDecoration(
+                  hintText: 'Username',
+                  prefixIcon: Icon(Icons.person)
+                ),
               ),
             ),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
-            child: TextField(
-              controller: _password,
-              decoration: InputDecoration(
-                hintText: 'Password',
-                prefixIcon: Icon(Icons.lock)
+       
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
+              child: TextField(
+                controller: _password,
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  prefixIcon: Icon(Icons.lock)
+                ),
               ),
             ),
-          ),
-
-
-          Padding(
-           padding: const EdgeInsets.only(left: 28, right: 28, top: 40),
-            child: GestureDetector(
+       
+       
+            Padding(
+             padding: const EdgeInsets.only(left: 28, right: 28, top: 40),
+              child: GestureDetector(
+                onTap: (){
+                   _login();
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.purple[700]
+                  ),
+                  child: Center(
+                    child: Text("Login", style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white
+                    ),),
+                  ),
+                ),
+              ),
+            
+            ),
+       
+            SizedBox(height: 40,),
+            GestureDetector(
               onTap: (){
-                 _login();
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
               },
-              child: Container(
-                width: double.infinity,
-                height: 60,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.purple[700]
-                ),
-                child: Center(
-                  child: Text("Login", style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white
-                  ),),
-                ),
-              ),
-            ),
-          
-          )
-
-
-
-         ],
+              child: Text("Create an Account ? "))
+       
+       
+       
+           ],
+         ),
        ),
     );
   }

@@ -41,48 +41,50 @@ void initState() {
         backgroundColor: Colors.purple[800],
         title: Text("NearBy Location"),
       ),      
-      body: ListView.builder(
-          itemCount:userData == null ? 0 : userData!.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-                  leading: CircleAvatar(
-                    radius: 24,
-                    backgroundColor: Colors.teal,
-                    child: CircleAvatar(
-                      backgroundImage: NetworkImage(connection+'ChattingApp/profiles/${userData![index]["user_image"]}'),
-                      radius: 21,
+      body: Container(
+        child: ListView.builder(
+            itemCount:userData == null ? 0 : userData!.length,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                    leading: CircleAvatar(
+                      radius: 24,
+                      backgroundColor: Colors.teal,
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(connection+'ChattingApp/profiles/${userData![index]["user_image"]}'),
+                        radius: 21,
+                      ),
                     ),
-                  ),
-                  trailing:  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                       Container(
-                        width: 100,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.purple[800],
-                          borderRadius: BorderRadius.circular(4)
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Center(child: Text("Send Request", style: TextStyle(
-                            color: Colors.white
-                          ),),),
-                        ),
-                       )
-                    ],
-                  ),
-                  title: Text("${userData![index]["user_name"]}", style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                  ),),
-            
-                  subtitle: Text("Hi, How are you?"),
-                  
-                  
-                  
-                  );
-          }),
+                    trailing:  Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                         Container(
+                          width: 100,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: Colors.purple[800],
+                            borderRadius: BorderRadius.circular(4)
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(child: Text("Send Request", style: TextStyle(
+                              color: Colors.white
+                            ),),),
+                          ),
+                         )
+                      ],
+                    ),
+                    title: Text("${userData![index]["user_name"]}", style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                    ),),
+              
+                    subtitle: Text("Hi, How are you?"),
+                    
+                    
+                    
+                    );
+            }),
+      ),
     );
   }
 }
