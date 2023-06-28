@@ -1,6 +1,6 @@
 <dependencies>
   <compile
-      roots="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:shared_preferences_android::release,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:fluttertoast::release,io.flutter:flutter_embedding_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar,io.flutter:armeabi_v7a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:arm64_v8a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:x86_64_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.2.0@jar,androidx.annotation:annotation-experimental:1.1.0@aar,androidx.tracing:tracing:1.0.0@aar,org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar,org.jetbrains:annotations:13.0@jar">
+      roots="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:shared_preferences_android::release,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:fluttertoast::release,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:path_provider_android::release,io.flutter:flutter_embedding_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar,io.flutter:armeabi_v7a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:arm64_v8a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:x86_64_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.5.0@jar,org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar,org.jetbrains:annotations:13.0@jar,androidx.annotation:annotation-experimental:1.1.0@aar,androidx.tracing:tracing:1.0.0@aar">
     <dependency
         name="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
         simpleName="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar"/>
@@ -10,6 +10,9 @@
     <dependency
         name="D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:fluttertoast::release"
         simpleName="com.example.FlutterToast:fluttertoast"/>
+    <dependency
+        name="D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:path_provider_android::release"
+        simpleName="io.flutter.plugins.pathprovider:path_provider_android"/>
     <dependency
         name="io.flutter:flutter_embedding_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar"
         simpleName="io.flutter:flutter_embedding_release"/>
@@ -92,14 +95,8 @@
         name="androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar"
         simpleName="androidx.lifecycle:lifecycle-viewmodel"/>
     <dependency
-        name="androidx.annotation:annotation:1.2.0@jar"
+        name="androidx.annotation:annotation:1.5.0@jar"
         simpleName="androidx.annotation:annotation"/>
-    <dependency
-        name="androidx.annotation:annotation-experimental:1.1.0@aar"
-        simpleName="androidx.annotation:annotation-experimental"/>
-    <dependency
-        name="androidx.tracing:tracing:1.0.0@aar"
-        simpleName="androidx.tracing:tracing"/>
     <dependency
         name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib"/>
@@ -109,9 +106,15 @@
     <dependency
         name="org.jetbrains:annotations:13.0@jar"
         simpleName="org.jetbrains:annotations"/>
+    <dependency
+        name="androidx.annotation:annotation-experimental:1.1.0@aar"
+        simpleName="androidx.annotation:annotation-experimental"/>
+    <dependency
+        name="androidx.tracing:tracing:1.0.0@aar"
+        simpleName="androidx.tracing:tracing"/>
   </compile>
   <package
-      roots="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:shared_preferences_android::release,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:fluttertoast::release,io.flutter:flutter_embedding_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar,io.flutter:armeabi_v7a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:arm64_v8a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:x86_64_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.tracing:tracing:1.0.0@aar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.2.0@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar,org.jetbrains:annotations:13.0@jar,androidx.annotation:annotation-experimental:1.1.0@aar">
+      roots="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:shared_preferences_android::release,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:fluttertoast::release,D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:path_provider_android::release,io.flutter:flutter_embedding_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar,io.flutter:armeabi_v7a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:arm64_v8a_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,io.flutter:x86_64_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.tracing:tracing:1.0.0@aar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.5.0@jar,org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar,org.jetbrains:annotations:13.0@jar,androidx.annotation:annotation-experimental:1.1.0@aar">
     <dependency
         name="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
         simpleName="__local_aars__:D:\Work Related Stuff\My Projects\ChattingApp\chatapp\build\app\intermediates\flutter\release\libs.jar"/>
@@ -121,6 +124,9 @@
     <dependency
         name="D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:fluttertoast::release"
         simpleName="com.example.FlutterToast:fluttertoast"/>
+    <dependency
+        name="D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android@@:path_provider_android::release"
+        simpleName="io.flutter.plugins.pathprovider:path_provider_android"/>
     <dependency
         name="io.flutter:flutter_embedding_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar"
         simpleName="io.flutter:flutter_embedding_release"/>
@@ -151,9 +157,6 @@
     <dependency
         name="io.flutter:x86_64_release:1.0.0-b4fb11214dd2dda6ce012dd98ea498e9e8b91262@jar"
         simpleName="io.flutter:x86_64_release"/>
-    <dependency
-        name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
-        simpleName="org.jetbrains.kotlin:kotlin-stdlib"/>
     <dependency
         name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
         simpleName="androidx.lifecycle:lifecycle-common-java8"/>
@@ -209,8 +212,11 @@
         name="androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar"
         simpleName="androidx.lifecycle:lifecycle-viewmodel"/>
     <dependency
-        name="androidx.annotation:annotation:1.2.0@jar"
+        name="androidx.annotation:annotation:1.5.0@jar"
         simpleName="androidx.annotation:annotation"/>
+    <dependency
+        name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
+        simpleName="org.jetbrains.kotlin:kotlin-stdlib"/>
     <dependency
         name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib-common"/>

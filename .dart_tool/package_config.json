@@ -38,6 +38,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "crypto",
+      "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "cupertino_date_textbox",
       "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_date_textbox-1.0.3",
       "packageUri": "lib/",
@@ -100,6 +106,18 @@
     {
       "name": "google_nav_bar",
       "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/google_nav_bar-5.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "hive",
+      "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/hive-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "hive_flutter",
+      "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/hive_flutter-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -168,6 +186,24 @@
       "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider",
+      "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.0.15",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "path_provider_android",
+      "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.0.27",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "path_provider_foundation",
+      "rootUri": "file:///C:/Users/pv/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "path_provider_linux",
@@ -320,7 +356,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-06-25T08:32:16.343019Z",
+  "generated": "2023-06-28T10:38:15.351490Z",
   "generator": "pub",
   "generatorVersion": "3.0.1"
 }

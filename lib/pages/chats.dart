@@ -1,10 +1,20 @@
 import 'dart:convert';
+import 'package:hive_flutter/adapters.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:chat_bubbles/chat_bubbles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:hive/hive.dart';
 import '../connection/connection.dart';
+import 'package:path_provider/path_provider.dart';
+
+
+void main() async {
+  await Hive.initFlutter();
+  // You can optionally register your Hive adapter classes here
+  runApp(ChatPage());
+}
+
 class ChatPage extends StatefulWidget {
   var senderId;
   var chatusername;
@@ -42,22 +52,30 @@ class _ChatPageState extends State<ChatPage> {
   var currentLoginId = 22;
     bool Sendmessage_btn = true;
   List? MessageData;
+
+
+
 fetchMessages() async {
+  var dir = await getTemporaryDirectory();
+  await Hive.initFlutter(dir.path);
+  var chatsdb = await Hive.openBox('chatsdb');
+   var getdata =  chatsdb.get('chats'+widget.senderId);
+   MessageData = getdata;
+  
   _updateOnline();
   showStatus();
-
-
   var messageUrl = Uri.parse(connection+"ChattingApp/fetch_chatting.php?from_user_id=$from_user_id&to_user_id="+widget.senderId);
   var response = await http.get(messageUrl);
       var data = json.decode(response.body);
      setState(() {
-       MessageData = data;
+        chatsdb.put('chats'+widget.senderId, data);
+        var getdata =  chatsdb.get('chats'+widget.senderId);
+       MessageData = getdata;
      });
 }
 
 
 sendMessage() async {
-
   var sendMessageUrl = Uri.parse(connection+"ChattingApp/sendMessage.php");
   final response = await http.post(sendMessageUrl, body: {
     "from_user_id": from_user_id,

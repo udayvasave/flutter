@@ -1,9 +1,13 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:chatapp/auth/login.dart';
 import 'package:chatapp/connection/connection.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'all_user.dart';
 import 'chats.dart';
@@ -21,6 +25,8 @@ class _HomePageState extends State<HomePage> {
     String? user_id = '';
   String? user_name = '';
   String? user_image = '';
+
+
   _getUserDetails() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final String? _user_id = prefs.getString('user_id');
@@ -35,14 +41,45 @@ class _HomePageState extends State<HomePage> {
   }
 
 
+Timer? timer;
 
-  _showUsers() async{
+void startFunction() {
+  timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
+    // Your function logic here
+    _showUsers();
+  });
+}
 
-      var url = Uri.parse(connection+"/ChattingApp/fetch_chat_user.php?currentuserid=36");
+
+
+
+  _showUsers() async{    
+      var url = Uri.parse(connection+"/ChattingApp/fetch_chat_user.php?currentuserid=${user_id}");
       var response = await http.get(url);
       var data = json.decode(response.body);
+    var dir = await getTemporaryDirectory();
+    await Hive.initFlutter(dir.path);
+    var chatsdb = await Hive.openBox('chatsdb');
+    
      setState(() {
+      chatsdb.put('chats_users', data);
+      var getdata =  chatsdb.get('chats_users');
        userData = data;
+     });
+  }
+
+
+
+  _fetchOffline() async {
+    //  var dir = await getTemporaryDirectory();
+    // await Hive.initFlutter(dir.path);
+     var dir = await getApplicationDocumentsDirectory();
+     Hive.init(dir.path);
+  
+    var chatsdb = await Hive.openBox('chatsdb');
+    var getdata =  chatsdb.get('chats_users');
+     setState(() {      
+         userData = getdata;      
      });
   }
 
@@ -69,8 +106,11 @@ class _HomePageState extends State<HomePage> {
 void initState() {
     // TODO: implement initState
     super.initState();
+    _fetchOffline();
     _showUsers();
     _getUserDetails();
+    startFunction();
+    
 
   }
 
@@ -138,7 +178,7 @@ void initState() {
                       fontWeight: FontWeight.w500,
                     ),),
               
-                    subtitle: Text("Hi, How are you?"),
+                    subtitle: Text("${userData![index]['last_message']}"),
                     
                     
                     

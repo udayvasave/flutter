@@ -3,7 +3,10 @@ import 'dart:convert';
 import 'package:chatapp/auth/login.dart';
 import 'package:chatapp/connection/connection.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'chats.dart';
 
@@ -15,16 +18,36 @@ class AllUsers extends StatefulWidget {
 }
 
 class _AllUsersState extends State<AllUsers> {
+
  List? userData;
   _showUsers() async{
       var url = Uri.parse(connection+"ChattingApp/fetch_users.php");
       var response = await http.get(url);
       var data = json.decode(response.body);
+       var dir = await getTemporaryDirectory();
+      await Hive.initFlutter(dir.path);
+      var chatsdb = await Hive.openBox('chatsdb');
      setState(() {
-       userData = data;
+      chatsdb.put('all_chats_users', data);
+      var getdata =  chatsdb.get('all_chats_users');
+       userData = data;       
      });
   }
 
+
+  _fetchOffline() async {
+    //  var dir = await getTemporaryDirectory();
+    // await Hive.initFlutter(dir.path);
+     var dir = await getApplicationDocumentsDirectory();
+     Hive.init(dir.path);
+  
+    var chatsdb = await Hive.openBox('chatsdb');
+    var getdata =  chatsdb.get('all_chats_users');
+     setState(() {      
+         userData = getdata;    
+         print(userData);  
+     });
+  }
 
   _logout() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -63,6 +86,7 @@ class _AllUsersState extends State<AllUsers> {
 void initState() {
     // TODO: implement initState
     super.initState();
+     _fetchOffline();
     _showUsers();
     _getUserDetails();
 
@@ -77,6 +101,7 @@ void initState() {
         actions: [
           IconButton(onPressed: (){
              _logout();
+             
           }, icon: Icon(Icons.location_on_outlined))
         ],
       ),

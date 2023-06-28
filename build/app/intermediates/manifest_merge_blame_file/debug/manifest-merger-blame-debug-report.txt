@@ -15,60 +15,87 @@
 15    <uses-permission android:name="android.permission.INTERNET" />
 15-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:36:5-67
 15-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:36:22-64
-16
-17    <application
-18        android:name="android.app.Application"
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.6.0] C:\Users\pv\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/ic_launcher"
-22        android:label="chatapp" >
-23        <activity
-24            android:name="com.example.chatapp.MainActivity"
-25            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-26            android:exported="true"
-27            android:hardwareAccelerated="true"
-28            android:launchMode="singleTop"
-29            android:theme="@style/LaunchTheme"
-30            android:windowSoftInputMode="adjustResize" >
-31
-32            <!--
-33                 Specifies an Android theme to apply to this Activity as soon as
-34                 the Android process has started. This theme is visible to the user
-35                 while the Flutter UI initializes. After that, this theme continues
-36                 to determine the Window background behind the Flutter UI.
-37            -->
-38            <meta-data
-39                android:name="io.flutter.embedding.android.NormalTheme"
-40                android:resource="@style/NormalTheme" />
-41
-42            <intent-filter>
-43                <action android:name="android.intent.action.MAIN" />
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-46            </intent-filter>
-47        </activity>
-48        <!--
-49             Don't delete the meta-data below.
-50             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-51        -->
-52
-53        <meta-data
-54            android:name="flutterEmbedding"
-55            android:value="2" />
-56
-57        <uses-library
-57-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-58            android:name="androidx.window.extensions"
-58-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-59            android:required="false" />
-59-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-60        <uses-library
-60-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-61            android:name="androidx.window.sidecar"
-61-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-62            android:required="false" />
-62-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-63    </application>
-64
-65</manifest>
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:37:5-79
+16-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:37:22-76
+17    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+17-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:38:5-89
+17-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:38:22-86
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:39:5-81
+18-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:39:22-78
+19    <uses-permission android:name="com.example.towntour.permission.MAPS_RECEIVE" />
+19-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:40:5-84
+19-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:40:22-81
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:41:5-79
+20-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:41:22-76
+21    <uses-permission android:name="android.permission.CALL_PHONE" />
+21-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:42:5-69
+21-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:42:22-66
+22    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+22-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:43:5-75
+22-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:43:22-72
+23    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+23-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:44:5-98
+23-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:44:22-95
+24    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+24-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:45:5-81
+24-->D:\Work Related Stuff\My Projects\ChattingApp\chatapp\android\app\src\main\AndroidManifest.xml:45:22-78
+25
+26    <application
+27        android:name="android.app.Application"
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.6.0] C:\Users\pv\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:icon="@mipmap/ic_launcher"
+31        android:label="chatapp" >
+32        <activity
+33            android:name="com.example.chatapp.MainActivity"
+34            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+35            android:exported="true"
+36            android:hardwareAccelerated="true"
+37            android:launchMode="singleTop"
+38            android:theme="@style/LaunchTheme"
+39            android:windowSoftInputMode="adjustResize" >
+40
+41            <!--
+42                 Specifies an Android theme to apply to this Activity as soon as
+43                 the Android process has started. This theme is visible to the user
+44                 while the Flutter UI initializes. After that, this theme continues
+45                 to determine the Window background behind the Flutter UI.
+46            -->
+47            <meta-data
+48                android:name="io.flutter.embedding.android.NormalTheme"
+49                android:resource="@style/NormalTheme" />
+50
+51            <intent-filter>
+52                <action android:name="android.intent.action.MAIN" />
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+55            </intent-filter>
+56        </activity>
+57        <!--
+58             Don't delete the meta-data below.
+59             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+60        -->
+61
+62        <meta-data
+63            android:name="flutterEmbedding"
+64            android:value="2" />
+65
+66        <uses-library
+66-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+67            android:name="androidx.window.extensions"
+67-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+68            android:required="false" />
+68-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+69        <uses-library
+69-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+70            android:name="androidx.window.sidecar"
+70-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+71            android:required="false" />
+71-->[androidx.window:window:1.0.0-beta04] C:\Users\pv\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+72    </application>
+73
+74</manifest>
