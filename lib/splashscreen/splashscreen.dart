@@ -7,6 +7,8 @@ import '../auth/login.dart';
 import '../navigator/navigation.dart';
 import '../pages/home.dart';
 import '../pages/nearby.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -46,8 +48,12 @@ class _SplasState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: CircularProgressIndicator(),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: SvgPicture.asset("assets/splshscreen/Splash_Screen_Dating_App2.svg",fit: BoxFit.cover,),
+      
+        
       ),
     );
   }
