@@ -51,7 +51,7 @@ class _SplasState extends State<Splashscreen> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: SvgPicture.asset("assets/splshscreen/Splash_Screen_Dating_App2.svg",fit: BoxFit.cover,),
+        child: SvgPicture.asset("assets/splshscreen/Splash_Screen_Dating_App1.svg",fit: BoxFit.cover,),
       
         
       ),
